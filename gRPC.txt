@@ -1,0 +1,72 @@
+https://youtu.be/zCXN4wj0uPo
+
+https://www.youtube.com/watch?v=-xKUK442lNQ
+
+
+GRPC
+
+
+
+RPC= Remote prosiger call
+
+* What is gRPC?
+--->
+# gRPC is google Remote Procedure Call (gRPC) open source framework used to create scalable and quick APIs. It enables unary, 
+ client streaming, server streaming, or both client-server streaming communication between client and server applications. 
+ gRPC is built for the HTTP/2 protocol, which is lightweight and efficient in both transmitting and receiving data.
+
+# It is a recursive acronym that stands for grpc remote procedure call. gRPC originated from Google in 2015. It was based on an internal Google project called Stubby which was an internal framework for gRPC, but just for Google services.
+
+
+#What is gRPC long form of gRPC Protocol ?
+ ---> gRPC (Google Remote Procedure Call).
+
+
+#What is a protocol explain?
+--> protocol, in computer science, a set of rules or procedures for transmitting data between electronic devices, such as computers. In order for computers to exchange information, there must be a preexisting agreement as to how the information will be structured and how each side will send and receive it.
+
+#Why gRPC is faster than REST?
+---> “gRPC is roughly 7 times faster than REST when receiving data & roughly 10 times faster than REST when sending data for this specific payload. This is mainly due to the tight packing of the Protocol Buffers and the use of HTTP/2 by gRPC.
+
+#What gRPC used for?
+--> gRPC is a robust open-source RPC (Remote Procedure Call) framework used to build scalable and fast APIs. It allows the client and server applications to communicate transparently and develop connected systems. Many leading tech firms have adopted gRPC, such as Google, Netflix, Square, IBM, Cisco, & Dropbox.
+
+
+#What is REST vs gRPC?
+--> REST APIs generally use JSON or XML message formats, while gRPC uses protocol buffers. To signal errors, REST APIs use HTTP status codes, while gRPC uses error codes. gRPC's message sizes tend to be dramatically smaller than those of REST APIs.
+
+* .proto= gRPC create rules by establishing a .proto file that must be followed by both the client and the server when exchanging data.
+
+
+
+
+
+* gRPC is roughly 7 times faster than REST when receiving data & roughly 10 times faster than REST when sending data for this specific payload
+
+
+
+* gRPC uses Protocol Buffer by default to serialize payload data.
+
+-------------------------------------------------------------------------------
+
+ gRPC
+ -----
+ Today i am going explain you about gRPC protocol.
+  gRPC is open source framework used to create scalable and quick APIs.
+  You people know alredy HTTP protocol. It is just like that. long form of gRPC protocol is Google Remote Procedure Call.
+ It is introduced by google campony in 2015 for there project internal communication.
+ Mostly peoples are using it for internal communication like for client application to server application.
+ to communicates for one apllication to another application or one microservice to another microservice or in multimodule project.
+ Mostly google, netflix like that big-big companies are using even though in CloudLeaf project we are using. Now u might getting question why we use gRPC protocal over the HTTP protocol cos its 10 time more faster than HTTP protocol. Mostly HTTP protocol use XML or JSON formate to serialize data but gRPC uses Protocol Buffer to serialize data.
+
+* .proto= gRPC create rules by establishing a.proto file that must be followed by both the client and the server when exchanging data.
+
+
+
+Execution Flow...>
+
+There 3 version of protofilte i am using version 3 here which is latest, its mandetary to use proto file whiile exchanging data from one service another service cos its creates rules. then am i specified here file location where it will create classes. and here in proto we have use this massage keyword to create class. it has its own datatype. here i took some properties. and here i need one more class object so i defined here Auther class too. Also i wanted to create service file/service class here. so here by using rpc keyword i have defined getAuther method so this proto file will provide implemention for this to us. so now we need to compile this proto file for that we need plugin so i have specified here in pom.xml file and in this pom.xml i specified grpc-stub and grpc-protobuf to generated stub for us. now i have created grpc service module which will act as grpc server so for that i have added grpc-spring-boot-starter dependency here. so now we want access proto module generated classes or stub in service module so here in service module i have added proto module dependency so we can access now. So now i have client service to communicate one service another service so for that i have addded grpc-client-spring-boot-starter so that this service act as client service.
+
+Proto file will generate all required stub to communicates form one service another service thats why its mandetary.
+
+grpc-devproblems-service this is channel which will help us comunicates with other serive/machiin. 

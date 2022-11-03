@@ -1,0 +1,3 @@
+@Anno
+public class Demo {
+}
